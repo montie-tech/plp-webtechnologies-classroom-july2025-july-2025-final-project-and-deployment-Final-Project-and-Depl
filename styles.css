@@ -1,0 +1,242 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+h3 {
+  text-align: center;
+  color: #333;
+}
+h1 {
+  font-size: 20px;
+  color:#f39c12;
+}
+h2 {
+  text-align: center;
+  color: #fdfafa;
+}
+h4 {
+  text-align: center;
+  color: #f39c12;
+  font-size: 20px;
+}
+/* Navbar */
+header {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  line-height: 1.0;
+}
+header h1 { 
+  margin: 0;
+}
+
+/* Updated navigation styles for responsiveness */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover { 
+  color: #f39c12;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background: url("images/landing.jpg") no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  margin-top: 20px;
+  
+}
+.hero h2 { font-size: 2.5rem; }
+.hero .btn {
+  background: #f39c12;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.hero .btn:hover { 
+  background: #f0eeec;
+  color:#222;
+ }
+
+/* Gallery */
+#gallery {
+  padding: 40px 20px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #f4f4f4;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  height: 430px;
+}
+.card img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Booking */
+#booking {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input, select, button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button.btn {
+  background: #f39c12;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button.btn:hover { 
+  background:#222;
+  color:#f0eeec;
+ }
+
+.hidden { display: none; }
+#confirmation {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #27ae60;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px; /* Push footer to bottom if page is short */
+  width: 100%;
+  border-top: 3px solid #444;
+  font-size: 1rem;
+  line-height: 0.3;
+  margin-bottom: -35px;
+  margin-left: -35px;
+  margin-right: -5px;
+}
+
+
+/* ====== RESPONSIVE BREAKPOINTS ====== */
+@media (max-width: 768px) {
+  /* Stack header items */
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Hide nav links initially on mobile */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #222;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Show links when toggled */
+  .nav-links.show {
+    display: block;
+  }
+
+  /* Show hamburger icon */
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  
+  footer {
+    padding: 15px;
+    font-size: 0.95rem; /* slightly smaller text */
+  }
+}
+
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-links ul {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  form {
+    padding: 1rem;
+  }
+  footer {
+    padding: 12px;
+    font-size: 0.9rem; /* even smaller text for tiny devices */
+  }
+}

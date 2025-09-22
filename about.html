@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Vin Graphics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+  <h1>Vin Graphics Photography</h1>
+
+  <!-- Hamburger Icon -->
+  <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+  <nav class="nav-links">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#booking">Book Appointment</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <section>
+      
+  <h4>About Vin Graphics Photography</h4>
+  <p>
+    Vin Graphics Photography is dedicated to capturing life’s most precious moments with creativity, passion, and precision. 
+    Our goal is to turn your memories into timeless visuals through a combination of expert photography techniques and 
+    a keen eye for detail. Whether it’s weddings, portraits, events, or commercial shoots, we strive to create images that 
+    truly tell your story.
+  </p>
+
+  <p>
+    We believe photography is more than just taking pictures – it’s about creating lasting impressions. 
+    At Vin Graphics Photography, we combine modern equipment with artistic vision to deliver high-quality images 
+    that you’ll cherish for years to come. Every project is handled with professionalism, care, 
+    and a personalized touch to ensure your experience with us is unforgettable.
+  </p>
+   <p>We are available on booking one week before on week days and available on weekends in town CBD</p>
+   <p>We are open from 9am to 6pm everyday </p>
+   <p>We look forward to create memories with you 🤩🤩 </p>
+    </section>
+    <section id="booking">
+    <h2>Book an Appointment</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="service">Select Photography Type:</label>
+      <select id="service" required>
+        <option value="">-- Select --</option>
+        <option value="Wedding">Wedding</option>
+        <option value="Portrait">Portrait</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Nature">Nature</option>
+      </select>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" required>
+
+      <button type="submit" class="btn">Book Appointment</button>
+    </form>
+    <p id="confirmation" class="hidden"></p>
+  </section>
+  </main>
+  <script>
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+</script>
+
+  <footer>
+    <p>&copy; 2025 My Website | All rights reserved</p>
+  </footer>
+</body>
+</html>

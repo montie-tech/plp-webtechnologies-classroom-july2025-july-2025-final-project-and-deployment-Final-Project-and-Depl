@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vin Graphics  Photography</title>
+  <link rel="icon" type="image/png"  href="images/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+ <header>
+  <h1>Vin Graphics Photography</h1>
+
+  <!-- Hamburger Icon -->
+  <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+  <nav class="nav-links">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#booking">Book Appointment</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Capturing Moments, Creating Memories</h2>
+    <p>Explore our photography services and book your perfect session today.</p>
+    <a href="#booking" class="btn">Book Now</a>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Our Photography Services</h2>
+    <div class="gallery-grid">
+      <div class="card">
+        <img src="images/wedding.jpg" alt="Wedding Photography">
+        <h3>Wedding Photography</h3>
+      </div>
+      <div class="card">
+        <img src="images/portrait.jpg" alt="Portrait Photography">
+        <h3>Portrait Photography</h3>
+      </div>
+      <div class="card">
+        <img src="images/street.jpg" alt="Street Photography">
+        <h3>Street Photography</h3>
+      </div>
+      <div class="card">
+        <img src="images/graduation.jpg" alt="Graduation Photography">
+        <h3>Graduation Photography</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking">
+    <h2>Book an Appointment</h2>
+  <form id="bookingForm">
+  <label for="name">Full Name:</label>
+  <input type="text" id="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" required>
+
+  <label for="service">Select Photography Type:</label>
+  <select id="service" required>
+    <option value="">-- Select --</option>
+    <option value="Wedding">Wedding</option>
+    <option value="Portrait">Portrait</option>
+    <option value="Fashion">Fashion</option>
+    <option value="Nature">Nature</option>
+  </select>
+
+  <label for="date">Preferred Date:</label>
+  <input type="date" id="date" required>
+
+  <button type="submit" class="btn">Book Appointment</button>
+</form>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+
+  const message = `Hello, I would like to book a ${service} photography session.\nName: ${name}\nEmail: ${email}\nPreferred Date: ${date}`;
+
+  // Replace with your WhatsApp number (with country code, no + sign)
+  const phoneNumber = "+254759587215";
+  const url = `https://wa.me/${254759587215}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+});
+</script>
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+</script>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Vin Graphics Photography. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
